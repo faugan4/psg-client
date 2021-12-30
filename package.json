@@ -1,0 +1,63 @@
+{
+  "name": "client",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@fontsource/roboto": "^4.5.1",
+    "@gorhom/bottom-sheet": "4",
+    "@material-ui/core": "^4.12.3",
+    "@material-ui/icons": "^4.11.2",
+    "@material-ui/lab": "^4.0.0-alpha.60",
+    "@reduxjs/toolkit": "^1.5.1",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "axios": "^0.23.0",
+    "faker": "^5.5.3",
+    "firebase": "^8.10.0",
+    "fontsource-roboto": "^4.0.0",
+    "radium": "^0.26.1",
+    "react": "^17.0.2",
+    "react-animations": "^1.0.0",
+    "react-dom": "^17.0.2",
+    "react-horizontal-datepicker": "^2.0.3",
+    "react-horizontal-strip-datepicker": "^3.0.2",
+    "react-id-generator": "^3.0.2",
+    "react-image-gallery": "^1.2.7",
+    "react-loading": "^2.0.3",
+    "react-modal": "^3.14.3",
+    "react-native-gesture-handler": "^2.0.0",
+    "react-native-reanimated": "^2.2.4",
+    "react-redux": "^7.2.3",
+    "react-router-dom": "^5.3.0",
+    "react-scripts": "4.0.3",
+    "react-spring-bottom-sheet": "^3.4.0",
+    "react-stripe-checkout": "^2.6.3",
+    "react-swipeable-views": "^0.14.0",
+    "redis": "^3.1.2",
+    "uuid": "^8.3.2",
+    "material-ui": "0.20.0",
+    "react-motion": "0.5.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

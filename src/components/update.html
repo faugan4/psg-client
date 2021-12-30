@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js" ></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js" ></script>
+    <script>
+        window.onload=function(){
+            const firebaseConfig = {
+            apiKey: "AIzaSyBbZbzP407pWBHaaAEr48jJkrZm_8F2vfQ",
+            authDomain: "prosportguru-a0569.firebaseapp.com",
+            projectId: "prosportguru-a0569",
+            storageBucket: "prosportguru-a0569.appspot.com",
+            messagingSenderId: "46274020109",
+            appId: "1:46274020109:web:77138d23dbfecebac1a644"
+            };
+
+            firebase.initializeApp(firebaseConfig);
+
+            firebase.firestore().collection("psg_challenges").onSnapshot((snap)=>{
+                snap.docs.map(async (doc)=>{
+                    const key=doc.id;
+                    const type=doc.data().type;
+                    const snap2=await firebase.firestore().collection("psg_picks")
+                    .where("id_challenge","==",key).get();
+
+                   snap2.docs.map(async (doc2)=>{
+                       const id_pick=doc2.id;
+                       const pick={...doc2.data(),type_challenge:type};
+
+                       await firebase.firestore().collection("psg_picks").doc(id_pick)
+                       .update({type_challenge:type},{merge:true});
+                       //console.log("done with",id_pick);
+                   })
+
+                })
+            })
+           
+        }
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
